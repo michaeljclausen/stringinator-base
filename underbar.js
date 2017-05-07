@@ -24,7 +24,8 @@ const indexOf = function(array, target, fromIndex=0) {
 };
 
 const isArrayLike = function(obj) {
-  // Your code goes here
+  if (Array.isArray(obj)) return true;
+  return obj.hasOwnProperty('length') && obj.length >= 0;
 };
 
 // The cornerstone of a functional library -- iterate all elements, pass each to a callback function.
