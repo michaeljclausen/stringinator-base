@@ -52,10 +52,10 @@ const map = function(obj, callback=identity) {
   return result;
 };
 
-// Return an array of the values o a certain property in the collection.
+// Return an array of the values of a certain property in the collection.
 // E.g. given an array of people objects, return an array of just their ages.
 const pluck = function(obj, key) {
-  // Your code goes here
+  return map(obj, item => item[key]);
 };
 
 // Reduces collection to a value which is the accumulated result of running
