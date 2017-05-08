@@ -17,11 +17,10 @@ const removeChar = function(str, target) {
 
 const hasChar = function(str, target) {
   return _.some(str.split(''), letter => letter === target);
-
 };
 
 const isOnlyDigits = function(str) {
-  // Your code goes here
+  return _.every(str.split(''), character => character.charCodeAt(0) >= 48 && character.charCodeAt(0) <= 57);
 };
 
 const filterToOnlyDigits = function(str) {
