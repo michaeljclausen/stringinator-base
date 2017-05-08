@@ -29,13 +29,15 @@ const filterToOnlyDigits = function(str) {
 };
 
 const truncateString = function(val, maxLength) {
-  // A freebie solution, this is the ONLY method here that doesn't use Underbar.
   return String(val).slice(0, maxLength);
 };
 
 const truncateLongItems = function(obj, maxLength) {
-  // hint: use truncateString above
-  // Your code goes here
+  let results = [];
+  _.each(obj, item => {
+    results.push(truncateString(item, maxLength));
+  });
+  return results;
 };
 
 const countChars = function(str) {
