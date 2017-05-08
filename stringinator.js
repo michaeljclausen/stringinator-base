@@ -11,8 +11,8 @@ const last = function(str, n) {
 };
 
 const removeChar = function(str, target) {
-  // hint: use _.reject
-  // Your code goes here
+  let result = _.reject(str.split(''), letter => letter === target);
+  return result.length > 1 ? result.join('') : result;
 };
 
 const hasChar = function(str, target) {
