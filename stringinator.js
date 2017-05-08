@@ -24,7 +24,8 @@ const isOnlyDigits = function(str) {
 };
 
 const filterToOnlyDigits = function(str) {
-  // Your code goes here
+  let result =  _.filter(str.split(''), character => character.charCodeAt(0) >= 48 && character.charCodeAt(0) <= 57);
+  return result.join('');
 };
 
 const truncateString = function(val, maxLength) {
