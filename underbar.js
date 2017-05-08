@@ -108,12 +108,18 @@ const filter = function(obj, callback=identity) {
       results.push(element);
     }
   });
-  return results
+  return results;
 };
 
 // Return object without the elements / object values that were rejected by the callback.
-const reject = function(arr, callback=identity) {
-  // Your code goes here
+const reject = function(obj, callback=identity) {
+  let results = [];
+  each(obj, element => {
+    if (!callback(element)) {
+      results.push(element);
+    }
+  });
+  return results;
 };
 
 // De-duplicates (de-dups) the elements / object values.
